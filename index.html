@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mapgular">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapgular</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<goo-map id="map" zoom="12" center="53.8489586, 27.4561801"></goo-map>
+			</div>
+		</div>
+
+		<hr/>
+	</div>
+
+	<div class="container" ng-controller="infoCtrl">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="oneoffice" placeholder="Write office name" />
+				</div>
+				<ul class="nav nav-tabs nav-pills">
+					<li ng-repeat="office in offices | filter : oneoffice">
+						<a href="#/offices/{{ office.id }}" >{{ office.title }}</a>
+					</li>
+				</ul>
+
+			</div>
+			<div class="col-md-8">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/angular-route.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/controllers/infoCtrl.js"></script>
+	<script src="js/controllers/officeCtrl.js"></script>
+	<script src="js/directives/mapDirective.js"></script>
+</body>
+</html>

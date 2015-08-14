@@ -1,0 +1,15 @@
+<h1>{{ singleOffice.title }}</h1>
+<hr/>
+<div class="row">
+	<div class="col-md-4 text-center">
+		<img class="office-img" ng-src="{{ singleOffice.images.thumb }}" alt="{{ singleOffice.title }}">
+	</div>
+	<div class="col-md-8">
+		<h3><a href="">{{ singleOffice.title }}</a></h3>
+		<p>{{ singleOffice.info }}</p>
+		<address>
+			{{ singleOffice.address }} <br/>
+			{{ singleOffice.geo }}
+		</address>
+	</div>
+</div>

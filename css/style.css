@@ -1,0 +1,22 @@
+.nav-tabs > li{
+	float:none;
+}
+
+#map {
+	width: 100%;
+	height: 500px;
+}
+
+.office-item{
+	list-style: none;
+	margin: 0 0 15px;
+}
+
+.office-img{
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.gm-style-iw p{
+	margin-bottom: 0;
+}
